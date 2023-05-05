@@ -1,0 +1,264 @@
+{{ define "main" }}
+<main>
+    <div class="bg-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl px-4 py-8 mx-auto">
+            <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
+                <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
+                    <h1
+                        class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
+                        PET Project</h1>
+                    <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
+                        Recicla y construye
+                    </h2>
+                    <a href="https://github.com/nusserstudios/tailbliss"
+                       class="block py-4 mx-auto space-x-4 sm:inline-flex md:inline-flex sm:text-center sm:block">
+                        <span
+                              class="rounded bg-gray-50 px-2.5 py-1 text-sm font-bold text-gray-900 block max-w-fit mx-auto md:min-w-fit mb-2">
+                            Nuestro proyecto
+                        </span>
+                        <span
+                              class="inline-flex items-center mb-2 space-x-1 text-sm font-medium text-gray-800 dark:text-white md:min-w-fit">
+                            <span>Conoce más de nuestro proyecto</span>
+                            <!-- Heroicon name: mini/chevron-right -->
+                            <svg class="w-5 h-5" xmlns="https://media.discordapp.net/attachments/1075889799740796988/1102976979919196240/LOGO_PET.png?width=410&height=410" viewBox="0 0 20 20"
+                                 fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                      clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                    <p
+                       class="max-w-xl mx-auto mb-6 font-normal text-gray-900 lg:mx-0 xl:mb-2 md:text-lg xl:text-xl dark:text-gray-50">
+                        Le damos una segunda vida a todas esas botellas que se desechan cada dia para reciclarlas en filamento 3D. </p>
+                </div>
+                <div class="col-span-6">
+                    {{ $hero := resources.GetMatch "images/pages/tailbliss-rocket-indigo.png" }}
+
+                    {{ $thumb := ($hero.Fill "400x400 webp q90") }}
+                    {{ $large := ($hero.Fill "576x576 webp q90") }}
+
+                    <img srcset="
+                        {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}"
+                         width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- More main page content here... -->
+
+    <!-- Testimonial/stats section -->
+    <div class="relative my-4">
+        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8">
+            <div class="relative sm:py-8 lg:py-0">
+                <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+                    <div
+                         class="absolute inset-y-0 w-full bg-gray-50 dark:bg-gray-900/10 right-1/2 rounded-r-3xl lg:right-72">
+                    </div>
+                    <svg class="absolute -ml-3 top-8 left-1/2 lg:-right-8 lg:left-auto lg:top-12" width="404"
+                         height="392" fill="none" viewBox="0 0 404 392" loading="lazy">
+                        <defs>
+                            <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20"
+                                     patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60"
+                                      fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
+                    </svg>
+                </div>
+                <div class="relative max-w-md px-4 py-6 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
+                    <!-- Testimonial card-->
+                    <div class="relative pt-64 pb-10 overflow-hidden shadow-xl rounded-2xl">
+                        {{ $missionimage := resources.Get "images/pages/our-mission.png" }}
+                        {{ with $missionimage }}
+                        {{ with .Resize (printf "%dx%d webp q50" .Width .Height) }}
+                        <img imgh src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+                             class="absolute inset-0 object-cover w-full h-full" alt="TailBliss - Our Mission"
+                             loading="lazy" />
+                        {{ end }}>
+                        {{ end }}
+                        <div class="absolute inset-0 bg-primary-300 mix-blend-multiply"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary-600 opacity-80">
+                        </div>
+                        <div class="relative px-8">
+                            <div>
+                              
+                            </div>
+                            <blockquote class="mt-8">
+                                <div class="relative text-lg font-medium text-white md:flex-grow">
+                                    <svg class="absolute top-0 left-0 w-8 h-8 transform -translate-x-3 -translate-y-2 text-primary-400/30"
+                                         fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                                        <path
+                                              d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                                    </svg>
+                                    <p class="relative">Somos un grupo de estudiantes del instituto <b><a target="_blank" href="https://agora.xtec.cat/insjoandaustria/">Joan d'Austria</a></b>
+                                        que creemos en la reutilización de los residuos y que darles una segunda vida es posible
+                                    </p>
+                                </div>
+
+                                <footer class="mt-4">
+                                    <p class="text-base font-semibold text-gray-200">
+                                        <b><a target="_blank" href="https://agora.xtec.cat/insjoandaustria/">Joan d'Austria ( Barcelona )</a> </b>
+                                    </p>
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:px-0">
+                <!-- Content area -->
+                <div class="md:pt-12 sm:pt-6 lg:pt-20">
+                    <h2
+                        class="text-3xl font-bold tracking-tight text-gray-900 capitalize dark:text-gray-50 sm:text-4xl">
+                        Descubre nuestro proyecto</h2>
+                    <div class="mt-6 space-y-6 text-gray-900 dark:text-white">
+                        <p class="text-lg leading-7"> 
+                        </p>
+                        <p class="text-lg leading-7">Trabajamos en la reutilización de botellas de plastico y envases de plastico que esten fabricados con <b> PET1 </b> (principal plastico usado en botellas).El objetivo de nuestro proyecto de sintesis es el de coger todos esos envases que ya iban a ser deshechados y darles un nuevo uso como filamento para imprimir 
+                        </p>
+                        <p class="text-lg leading-7">Para conseguir esto hemos construido con nuestras propias manos un prototipo de moldeador de plastico que realiza la función de moldear el plastico a elevadas temperaturas hasta darle el diametro que necesitamos, que en nuestro caso es de 1.75mm.
+                        </p>
+                        <span
+                        class="inline-flex items-center mb-2 space-x-1 text-sm font-medium text-gray-800 dark:text-white md:min-w-fit">
+                      
+                        <span> <a href="#">Explicación detallada del proceso</a> </span>
+                      <!-- Heroicon name: mini/chevron-right -->
+                        <a href="#">
+
+                            <svg class="w-5 h-5" xmlns="https://media.discordapp.net/attachments/1075889799740796988/1102976979919196240/LOGO_PET.png?width=410&height=410" viewBox="0 0 20 20"
+                            fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    clip-rule="evenodd" />
+                        </svg>
+
+                        </a>
+                
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero section -->
+    <div class="overflow-hidden sm:pt-6 lg:relative">
+        <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-12 lg:px-8">
+            <div>
+                <div class="md:mt-8">
+                    <div class="mt-6 sm:max-w-xl">
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+                            Menos residuos y mas creaciones
+                        </h1>
+                        <p class="pb-12 mt-6 text-lg text-gray-900 dark:text-white">
+                            Estamos abiertos a nuevos proyectos de impresión con nuestro filamento, ya que el principal objetivo de <b> PET Project </b> es imprimir cosas utilies a la vez que reutilizamos material deshechado.
+                            <br><br>
+                            Las caracteristicas de nuestro filamento reciclado son muy parecidas al material de impresión <b>PETG</b> ya que como su propio nombre indica esta hecho con PET. Y se asemeja bastante en sus principales caracteristicas, como su <b>flexibilidad y soportar ataquest químicos</b>
+                            <br><br>
+
+                            Otra gran caracteristica de nuestro filamento es su color, ya que este depende del color de las botellas este cambiarà. Aunque el color que más usamos es transparente opaco, ya que es el resultado de moldear botellas de plástico transparentes 
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
+            <div class="md:py-12 sm:relative sm:mt-12 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+                <div class="hidden sm:block">
+                    <div
+                         class="absolute inset-y-0 w-screen left-1/2 rounded-l-3xl bg-gray-50 dark:bg-gray-900/10 lg:left-80 lg:right-0 lg:w-full">
+                    </div>
+                    <svg class="absolute -mr-3 top-8 right-1/2 lg:left-0 lg:m-0" width="404" height="392" fill="none"
+                         viewBox="0 0 404 392" loading="lazy">
+                        <defs>
+                            <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20"
+                                     patternUnits="userSpaceOnUse">
+                                <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-gray-900/60"
+                                      fill="currentColor" />
+                            </pattern>
+                        </defs>
+                        <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)" />
+                    </svg>
+                </div>
+                <div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:h-full lg:max-w-none lg:pl-12">
+                    {{ $heroOne := resources.GetMatch "images/pages/hacktoberfest.jpg" }}
+
+                    {{ $tiny := ($heroOne.Fit "480x280 q80") }}
+                    {{ $small := ($heroOne.Fit "768x280 q80") }}
+                    {{ $medium := ($heroOne.Fit "1024x280 q80") }}
+                    {{ $large := ($heroOne.Fit "1374x1000 q80") }}
+
+                    <img srcset="
+                        {{- with $tiny.RelPermalink -}}{{.}} 480w{{- end -}}
+                        {{- with $small.RelPermalink -}}, {{.}} 768w{{- end -}}
+                        {{- with $medium.RelPermalink -}}, {{.}} 1024w{{- end -}}
+                        {{- with $large.RelPermalink -}}, {{.}} 1374w{{- end -}}" src="{{ $heroOne.RelPermalink }}"
+                         alt="TailBliss Hacktoberfest Image"
+                         class="w-full rounded-lg shadow-xl lg:h-full lg:w-auto lg:max-w-none" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="relative px-1 pt-8 pb-4 bg-transparent lg:px-8 lg:pt-12 lg:mb-4 md:mt-12">
+        <div class="absolute inset-0">
+            <div class="bg-gray-200 dark:bg-gray-900/50 h-1/3 sm:h-2/3"></div>
+        </div>
+        <div class="relative px-2 mx-auto max-w-7xl">
+            <div class="text-center">
+                <h2
+                    class="text-3xl font-black tracking-tight text-primary-500 capitalize dark:text-primary-300 sm:text-4xl">
+                    Conoce nuestro prototipo
+                </h2>
+                <p class="max-w-2xl mx-auto mt-3 text-xl text-gray-500 dark:text-gray-300 sm:mt-4">Aqui os dejamos diferentes articulos que os pueden interesar sobre nuestro prototipo</p>
+            </div>
+
+            <div class="mx-auto text-gray-900 max-w-7xl dark:text-gray-50 md:px-1.5">
+                <div class="px-4 text-gray-900 dark:text-white not-prose dark:text-zinc-200">
+                    <div class="grid gap-4 mx-auto mt-12 mb-4 lg:max-w-none md:grid-cols-3">
+                        {{ range (.Paginator 3).Pages }}
+                        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg bg-gray-50 dark:bg-gray-900">
+                            <a href="{{.Permalink}}">
+                                {{ with .Params.featured_image }}
+                                {{ with resources.Get . }}
+                                {{ $postimage := (.Resize "500x webp q90").RelPermalink }}
+                                <img src="{{ $postimage }}" class="object-fill overflow-hidden rounded-t-lg"
+                                     width="100%" height="" loading="lazy" alt="{{ .Title }}" />
+
+                                {{ end }}
+                                {{ end }}
+                            </a>
+                            <div class="p-6">
+                                <div class="flex-1">
+                                    <a href="{{.Permalink}}"
+                                       class="block mt-2 text-2xl font-black text-gray-900 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-500 hover:underline">
+                                        {{.Title}}
+                                    </a>
+                                    <p class="mt-3 text-base text-gray-900 dark:text-gray-300">
+                                        {{ .Params.summary }}
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+</main>
+{{ end }}
