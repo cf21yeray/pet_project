@@ -11,247 +11,44 @@ authorimage: ../assets/images/global/author.webp
 categories: News
 tags: News
 ---
-__Advertisement :smile:__
 
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
 
-You will like those projects!
+# La función de nuestro prototip
 
----
+La función del nuevo prototipo es clara, convertir abotellas en filamento 3D con el objetivo de reducir los residuos al mínimo. Para conseguir esto hemos combinado diferentes tecnicas de automatización para que funcione de manera atónoma y con una intervención mínima.
 
-# h1 Heading :blush:
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+Ya que nuestro proyecto esta muy orientado a la imporesión 3D hemos decidido optar por piezas impresas en 3D en los casos que podamos. Estas són las partes más importantes de nuestro prototipo:
 
+![prototipo](https://media.discordapp.net/attachments/1075889799740796988/1098291367731540039/IMG20230418204307.jpg?width=771&height=434)
 
-## Horizontal Rules
 
-***
+1. ### **Cortador de botellas:** 
+El cortador consta de dos piezas impresas en 3D con dos agujeros para poder insertar una hoja afilada a la altura necasaria ya que esta hoja es la encargada de cortar las botellas a la medida que necesitamos. 
 
----
+![cortador](https://media.discordapp.net/attachments/1075889799740796988/1103697469738586225/504.jpg?width=325&height=434)
 
-___
+2. ### **Rodamientos de la bobina:**
 
+Para moldear plástico tambien se puede usar plástico ya cortado, pensando en esto hemos diseñado un sistema que dispensa automaticamente el plástico en funcion de la rapidez de recogida. Este esta construido de cuatro soportes con una rueda cada uno, todo impreso en 3D, que posibilitan el rodaje de la bobina con el plástico de las botellas. 
 
-## Typographic replacements
+![bobina](https://media.discordapp.net/attachments/1075889799740796988/1103705959156699246/76c3183d-e0ce-448a-8232-dd547d3dd717.png)
 
-Enable typographer option to see result.
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+3. ### **Hot end o punta caliente:**
 
-test.. test... test..... test?..... test!....
+Este esta formado por un bloque caliente, una punta caliente, un termistor y un calefactor. El termistor es el sensor de temperatura producido por el calefactor. Esta temperatura, la transmite al bloque caliente haciendo que y que por consequencia se caliente la punta redonda a la temperatura que nosotros hayamos indicado ( entre 215 y 225 grados)
 
-!!!!!! ???? ,,  -- ---
+![punta_caliente](https://media.discordapp.net/attachments/1075889799740796988/1098291049450979379/IMG_20230419_185553.jpg?width=578&height=434)
 
-"Smartypants, double quotes" and 'single quotes'
+4. ### **Sistema de engranages**
 
+Sirve para recoger el filamento, nuestro producto final, mediante distintos engranajes y un motor de impresora 3D donde nosotros regulamos la velocidad en función de lo que necesitemos en ese momento
 
-## Emphasis
+![sistema_de_engranages](https://media.discordapp.net/attachments/1075889799740796988/1103714376009142412/4e5bfdb3-9673-4fe0-84c6-6c74c2928c99.png)
 
-**This is bold text**
 
-__This is bold text__
+5. ### **Pantalla de control**
 
-*This is italic text*
+La pantalla del prototipo es una pantalla de la impresora 3D Ender 3 para controlar la temperatura y el motor
 
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## Blockquotes
-
-
-> Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
-> > > ...or with spaces between arrows.
-
-
-## Lists
-
-Unordered
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-## Tables
-
-| Option | Description |
-| ------ | ----------- |
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-Right aligned columns
-
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
-
-
-## Images
-
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
-
-Like links, Images also have a footnote style syntax
-
-![Alt text][id]
-
-With a reference later in the document defining the URL location:
-
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
-
-
-## Plugins
-
-The killer feature of `markdown-it` is very effective support of
-[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
-
-
-### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
-
-> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
->
-> Shortcuts (emoticons): :-) :-( 8-) ;)
-
-see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
-
-
-### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
-
-- 19^th^
-- H~2~O
-
-
-### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
-
-++Inserted text++
-
-
-### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
-
-==Marked text==
-
-
-### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
-
-Footnote 1 link[^first].
-
-Footnote 2 link[^second].
-
-Inline footnote^[Text of inline footnote] definition.
-
-Duplicated footnote reference[^second].
-
-[^first]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^second]: Footnote text.
-
-
-### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
-
-Term 1
-
-:   Definition 1
-with lazy continuation.
-
-Term 2 with *inline markup*
-
-:   Definition 2
-
-        { some code, part of Definition 2 }
-
-    Third paragraph of definition 2.
-
-_Compact style:_
-
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-
-
-### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
-
-This is HTML abbreviation example.
-
-It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
-
-*[HTML]: Hyper Text Markup Language
-
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
+![Pantalla_LCD](https://media.discordapp.net/attachments/1075889799740796988/1103719307470458990/f3b4b040-f9aa-4afb-9dea-b504377770cd.png)

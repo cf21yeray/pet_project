@@ -1,10 +1,47 @@
 ---
-title: Contact
+title: Contacta con nosotros
 date: 2021-12-18T03:10:36.000Z
 draft: false
 language: en
 description: A test with @tailwindcss/typography & Prose
 ---
+
+## ¿ Quien somos ?
+
+Somos un grupo de estudiantes del instituto Joan d'Austria de Barcelona que pensamos que dar una segunda vida a los residuos que generamos cada dia es una es una de las cosas que necesita nuestro planeta. Por eso pensamos en este proyecto y con ayuda de nuestro professorado hemos conseguido hacer que pase de ser una simple idea a conseguir reciclar cada día más residuos. Estamos muy orgullosos de nuestro trbajo en el proyecto y os dejamos nuestra información de contacto por si alguien se siente interesado.
+
+- **Yeray Reyes Ocón** - cf21yeray.reyes@iesjoandaustria.org
+- **Adrián Ortuño Cejudo** - adrian.ortuno@iesjoandaustria.org
+- **Adrián Navarro Perez** - 1718navarropa@iesjoandaustria.org
+
+
+![FOTO_GRUPAL](https://media.discordapp.net/attachments/1075889799740796988/1107976086404477039/IMG-3095.jpg?width=733&height=541)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- @format -->
 
